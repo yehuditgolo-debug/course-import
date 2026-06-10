@@ -1,0 +1,248 @@
+{
+  "posts": [
+    {
+      "id": "CP1",
+      "lang": "he",
+      "title": "הפסיקי לתת ל-AI לכתוב בשבילך",
+      "hook1": "הפסיקי לתת ל-AI לכתוב בשבילך",
+      "hook2": "ה-AI הוא עורך, לא כותב",
+      "body": "אם תתני ל-AI לכתוב את כל הפוסט מאפס, תקבלי תוכן רובוטי ופלסטי שנשמע כמו כולם. הטריק הוא להקליט את המחשבות הגולמיות שלך על הרעיון. ה-AI לוקח את הבלאגן ועורך אותו לפוסט מושלם שנשמע כמוך. ככה את בולטת כמומחית במקום להישמע גנרית.",
+      "cta": "הגיבי \"מערכת\" ואשלח לך את התהליך המלא",
+      "createdAt": "2026-06-10T14:09:47.580Z",
+      "formats": [
+        {
+          "id": "CP1-reel",
+          "coreId": "CP1",
+          "type": "reel",
+          "lang": "he",
+          "status": "to_edit",
+          "scheduleDate": null,
+          "copy": {
+            "hook": "הפסיקי לתת ל-AI לכתוב בשבילך",
+            "subhook": "ה-AI הוא עורך, לא כותב",
+            "caption": "אם תתני ל-AI לכתוב את כל הפוסט מאפס, תקבלי תוכן רובוטי ופלסטי שנשמע כמו כולם. הטריק הוא להקליט את המחשבות הגולמיות שלך על הרעיון. ה-AI לוקח את הבלאגן ועורך אותו לפוסט מושלם שנשמע כמוך. ככה את בולטת כמומחית במקום להישמע גנרית.\n\nהגיבי \"מערכת\" ואשלח לך את התהליך המלא",
+            "broll": null
+          },
+          "render": null,
+          "createdAt": "2026-06-10T14:09:47.580Z",
+          "updatedAt": "2026-06-10T14:09:47.580Z"
+        },
+        {
+          "id": "CP1-carousel",
+          "coreId": "CP1",
+          "type": "carousel",
+          "lang": "he",
+          "status": "to_edit",
+          "scheduleDate": null,
+          "copy": {
+            "slides": [
+              {
+                "heading": "הפסיקי לתת ל-AI לכתוב בשבילך",
+                "text": "ה-AI הוא עורך, לא כותב"
+              },
+              {
+                "heading": "",
+                "text": "אם תתני ל-AI לכתוב את כל הפוסט מאפס, תקבלי תוכן רובוטי ופלסטי שנשמע כמו כולם."
+              },
+              {
+                "heading": "",
+                "text": "הטריק הוא להקליט את המחשבות הגולמיות שלך על הרעיון."
+              },
+              {
+                "heading": "",
+                "text": "ה-AI לוקח את הבלאגן ועורך אותו לפוסט מושלם שנשמע כמוך."
+              },
+              {
+                "heading": "",
+                "text": "ככה את בולטת כמומחית במקום להישמע גנרית."
+              },
+              {
+                "heading": "",
+                "text": "הגיבי \"מערכת\" ואשלח לך את התהליך המלא",
+                "isCta": true
+              }
+            ]
+          },
+          "render": null,
+          "createdAt": "2026-06-10T14:09:47.580Z",
+          "updatedAt": "2026-06-10T14:09:47.580Z"
+        },
+        {
+          "id": "CP1-story",
+          "coreId": "CP1",
+          "type": "story",
+          "lang": "he",
+          "status": "to_edit",
+          "scheduleDate": null,
+          "copy": {
+            "heading": "הפסיקי לתת ל-AI לכתוב בשבילך",
+            "body": "אם תתני ל-AI לכתוב את כל הפוסט מאפס, תקבלי תוכן רובוטי ופלסטי שנשמע כמו כולם. הטריק הוא להקליט את המחשבות הגולמיות שלך על הרעיון. ה-AI לוקח את הבלאגן ועורך אותו לפוסט מושלם שנשמע כמוך.",
+            "cta": "הגיבי \"מערכת\" ואשלח לך את התהליך המלא"
+          },
+          "render": null,
+          "createdAt": "2026-06-10T14:09:47.580Z",
+          "updatedAt": "2026-06-10T14:09:47.580Z"
+        },
+        {
+          "id": "CP1-image",
+          "coreId": "CP1",
+          "type": "image",
+          "lang": "he",
+          "status": "to_edit",
+          "scheduleDate": null,
+          "copy": {
+            "hook": "הפסיקי לתת ל-AI לכתוב בשבילך",
+            "subhook": "ה-AI הוא עורך, לא כותב"
+          },
+          "render": null,
+          "createdAt": "2026-06-10T14:09:47.580Z",
+          "updatedAt": "2026-06-10T14:09:47.580Z"
+        },
+        {
+          "id": "CP1-txt_broll",
+          "coreId": "CP1",
+          "type": "txt_broll",
+          "lang": "he",
+          "status": "to_edit",
+          "scheduleDate": null,
+          "copy": {
+            "lines": [
+              "הפסיקי לתת ל-AI לכתוב בשבילך",
+              "ה-AI הוא עורך, לא כותב",
+              "אם תתני ל-AI לכתוב את כל הפוסט מאפס, תקבלי תוכן רובוטי ופלסטי שנשמע כמו כולם.",
+              "הטריק הוא להקליט את המחשבות הגולמיות שלך על הרעיון.",
+              "ה-AI לוקח את הבלאגן ועורך אותו לפוסט מושלם שנשמע כמוך.",
+              "ככה את בולטת כמומחית במקום להישמע גנרית."
+            ],
+            "broll": null
+          },
+          "render": null,
+          "createdAt": "2026-06-10T14:09:47.580Z",
+          "updatedAt": "2026-06-10T14:09:47.580Z"
+        }
+      ]
+    },
+    {
+      "id": "CP2",
+      "lang": "en",
+      "title": "Stop letting AI write for you",
+      "hook1": "Stop letting AI write for you",
+      "hook2": "AI is an editor, not a writer",
+      "body": "If you let AI write the whole post from scratch you get robotic, plastic content that sounds like everyone else. The trick is to record your raw thoughts about the idea. AI takes the mess and edits it into a perfect post that sounds like you. That is how you stand out as an expert instead of sounding generic.",
+      "cta": "Comment \"SYSTEM\" and I will send you the full process",
+      "createdAt": "2026-06-10T14:09:47.580Z",
+      "formats": [
+        {
+          "id": "CP2-reel",
+          "coreId": "CP2",
+          "type": "reel",
+          "lang": "en",
+          "status": "to_edit",
+          "scheduleDate": null,
+          "copy": {
+            "hook": "Stop letting AI write for you",
+            "subhook": "AI is an editor, not a writer",
+            "caption": "If you let AI write the whole post from scratch you get robotic, plastic content that sounds like everyone else. The trick is to record your raw thoughts about the idea. AI takes the mess and edits it into a perfect post that sounds like you. That is how you stand out as an expert instead of sounding generic.\n\nComment \"SYSTEM\" and I will send you the full process",
+            "broll": null
+          },
+          "render": null,
+          "createdAt": "2026-06-10T14:09:47.580Z",
+          "updatedAt": "2026-06-10T14:09:47.580Z"
+        },
+        {
+          "id": "CP2-carousel",
+          "coreId": "CP2",
+          "type": "carousel",
+          "lang": "en",
+          "status": "to_edit",
+          "scheduleDate": null,
+          "copy": {
+            "slides": [
+              {
+                "heading": "Stop letting AI write for you",
+                "text": "AI is an editor, not a writer"
+              },
+              {
+                "heading": "",
+                "text": "If you let AI write the whole post from scratch you get robotic, plastic content that sounds like everyone else."
+              },
+              {
+                "heading": "",
+                "text": "The trick is to record your raw thoughts about the idea."
+              },
+              {
+                "heading": "",
+                "text": "AI takes the mess and edits it into a perfect post that sounds like you."
+              },
+              {
+                "heading": "",
+                "text": "That is how you stand out as an expert instead of sounding generic."
+              },
+              {
+                "heading": "",
+                "text": "Comment \"SYSTEM\" and I will send you the full process",
+                "isCta": true
+              }
+            ]
+          },
+          "render": null,
+          "createdAt": "2026-06-10T14:09:47.581Z",
+          "updatedAt": "2026-06-10T14:09:47.581Z"
+        },
+        {
+          "id": "CP2-story",
+          "coreId": "CP2",
+          "type": "story",
+          "lang": "en",
+          "status": "to_edit",
+          "scheduleDate": null,
+          "copy": {
+            "heading": "Stop letting AI write for you",
+            "body": "If you let AI write the whole post from scratch you get robotic, plastic content that sounds like everyone else. The trick is to record your raw thoughts about the idea. AI takes the mess and edits it into a perfect post that sounds like you.",
+            "cta": "Comment \"SYSTEM\" and I will send you the full process"
+          },
+          "render": null,
+          "createdAt": "2026-06-10T14:09:47.581Z",
+          "updatedAt": "2026-06-10T14:09:47.581Z"
+        },
+        {
+          "id": "CP2-image",
+          "coreId": "CP2",
+          "type": "image",
+          "lang": "en",
+          "status": "to_edit",
+          "scheduleDate": null,
+          "copy": {
+            "hook": "Stop letting AI write for you",
+            "subhook": "AI is an editor, not a writer"
+          },
+          "render": null,
+          "createdAt": "2026-06-10T14:09:47.581Z",
+          "updatedAt": "2026-06-10T14:09:47.581Z"
+        },
+        {
+          "id": "CP2-txt_broll",
+          "coreId": "CP2",
+          "type": "txt_broll",
+          "lang": "en",
+          "status": "to_edit",
+          "scheduleDate": null,
+          "copy": {
+            "lines": [
+              "Stop letting AI write for you",
+              "AI is an editor, not a writer",
+              "If you let AI write the whole post from scratch you get robotic, plastic content that sounds like everyone else.",
+              "The trick is to record your raw thoughts about the idea.",
+              "AI takes the mess and edits it into a perfect post that sounds like you.",
+              "That is how you stand out as an expert instead of sounding generic."
+            ],
+            "broll": null
+          },
+          "render": null,
+          "createdAt": "2026-06-10T14:09:47.581Z",
+          "updatedAt": "2026-06-10T14:09:47.581Z"
+        }
+      ]
+    }
+  ]
+}

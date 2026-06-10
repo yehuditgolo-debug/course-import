@@ -1,0 +1,26 @@
+{
+  "name": "content-system",
+  "version": "0.1.0",
+  "description": "A core-post content engine + visual dashboard, inspired by the NR 'content system'. One core post in, many scheduled formats out.",
+  "type": "module",
+  "bin": {
+    "csys": "src/cli.js"
+  },
+  "scripts": {
+    "serve": "node src/cli.js serve",
+    "seed": "node src/cli.js seed",
+    "repurpose": "node src/cli.js repurpose",
+    "render": "node src/cli.js render",
+    "render:png": "node scripts/render-png.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "optionalDependencies": {
+    "playwright": "^1.48.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}
