@@ -58,7 +58,15 @@ export function nextId(prefix = 'CP') {
 }
 
 // A core post is the single source of truth. Formats are derived from it.
-export function makeCorePost({ id, lang = 'he', title = '', hook1 = '', hook2 = '', body = '', cta = '' }) {
+//
+// `tags` and `metrics` are the structure for the data feedback loop (COPILOT.md
+// engine 2). The taxonomy values (which pillars / hook types exist) come from
+// the method knowledge base (method/), so we keep these as free-form strings
+// here rather than hard-coding a taxonomy the method should own.
+export function makeCorePost({
+  id, lang = 'he', title = '', hook1 = '', hook2 = '', body = '', cta = '',
+  pillar = '', hookType = '', angle = '', ctaType = '',
+} = {}) {
   if (!LANGS.includes(lang)) throw new Error(`Unknown lang: ${lang}`);
   return {
     id: id || nextId('CP'),
@@ -68,6 +76,18 @@ export function makeCorePost({ id, lang = 'he', title = '', hook1 = '', hook2 = 
     hook2,
     body,
     cta,
+    // --- tagging (drives advisor suggestions + data-loop grouping) ---
+    tags: {
+      pillar,    // which content pillar (method/05)
+      hookType,  // which hook pattern (method/04)
+      angle,     // the specific angle/POV
+      ctaType,   // type of call to action
+    },
+    // --- performance metrics (filled once data exists; powers the loop) ---
+    metrics: {
+      reach: null, views: null, saves: null, shares: null,
+      comments: null, profileVisits: null, leads: null, recordedAt: null,
+    },
     createdAt: new Date().toISOString(),
     formats: [],
   };
