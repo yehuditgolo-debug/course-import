@@ -13,6 +13,7 @@ import * as store from './store.js';
 import { FORMATS } from './schema.js';
 import { repurpose, suggestSchedule } from './engine/repurpose.js';
 import { renderFormatRecord } from './render/render.js';
+import { critiquePost } from './engine/advisor.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -35,7 +36,7 @@ export const AGENTS = [
     desc: { he: 'מפזר תאריכים לפורמטים מאושרים', en: 'Staggers dates for approved formats' },
   },
   {
-    id: 'advisor', code: 'A4', schedule: 'on-demand', live: false,
+    id: 'advisor', code: 'A4', schedule: 'on-demand', live: true,
     name: { he: 'יועץ פוסט ליבה', en: 'Core-post advisor' },
     desc: { he: 'הוקים, מבנה וביקורת לפי המתודה (method/)', en: 'Hooks, structure & critique per method/' },
   },
@@ -124,6 +125,17 @@ export async function runAgent(id) {
       }
       store.save(db);
       summary = `rendered ${n} format(s) → review`;
+    }
+
+    if (id === 'advisor') {
+      // Critique every core post against the golden test + red lines (method/).
+      let flagged = 0;
+      for (const post of db.posts) {
+        post.advice = critiquePost(post);
+        if (post.advice.verdict !== 'pass') flagged++;
+      }
+      store.save(db);
+      summary = `critiqued ${db.posts.length} core post(s); ${flagged} need attention`;
     }
 
     if (id === 'scheduler') {

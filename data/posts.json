@@ -24,7 +24,7 @@
         "leads": null,
         "recordedAt": null
       },
-      "createdAt": "2026-06-11T08:50:28.206Z",
+      "createdAt": "2026-06-11T12:49:14.809Z",
       "formats": [
         {
           "id": "CP1-reel",
@@ -40,8 +40,8 @@
             "broll": null
           },
           "render": null,
-          "createdAt": "2026-06-11T08:50:28.219Z",
-          "updatedAt": "2026-06-11T08:50:28.219Z"
+          "createdAt": "2026-06-11T12:49:14.810Z",
+          "updatedAt": "2026-06-11T12:49:14.810Z"
         },
         {
           "id": "CP1-carousel",
@@ -88,8 +88,8 @@
             ]
           },
           "render": null,
-          "createdAt": "2026-06-11T08:50:28.219Z",
-          "updatedAt": "2026-06-11T08:50:28.219Z"
+          "createdAt": "2026-06-11T12:49:14.810Z",
+          "updatedAt": "2026-06-11T12:49:14.810Z"
         },
         {
           "id": "CP1-story",
@@ -104,8 +104,8 @@
             "cta": "תגיב \"מותר\" ואשלח לך את המדריך לרגעים הקשים"
           },
           "render": null,
-          "createdAt": "2026-06-11T08:50:28.219Z",
-          "updatedAt": "2026-06-11T08:50:28.219Z"
+          "createdAt": "2026-06-11T12:49:14.810Z",
+          "updatedAt": "2026-06-11T12:49:14.810Z"
         },
         {
           "id": "CP1-image",
@@ -119,8 +119,8 @@
             "subhook": "לא שוקלים אצלי בכלל"
           },
           "render": null,
-          "createdAt": "2026-06-11T08:50:28.219Z",
-          "updatedAt": "2026-06-11T08:50:28.219Z"
+          "createdAt": "2026-06-11T12:49:14.810Z",
+          "updatedAt": "2026-06-11T12:49:14.810Z"
         },
         {
           "id": "CP1-txt_broll",
@@ -141,10 +141,75 @@
             "broll": null
           },
           "render": null,
-          "createdAt": "2026-06-11T08:50:28.219Z",
-          "updatedAt": "2026-06-11T08:50:28.219Z"
+          "createdAt": "2026-06-11T12:49:14.810Z",
+          "updatedAt": "2026-06-11T12:49:14.810Z"
         }
-      ]
+      ],
+      "advice": {
+        "verdict": "pass",
+        "redLines": [],
+        "hookCheck": {
+          "ok": true,
+          "problems": []
+        },
+        "goldenTest": [
+          {
+            "id": "desire",
+            "q": {
+              "he": "מדבר אל הרצון של האווטאר (תפקוד, לא מראה)?",
+              "en": "Speaks to the avatar's desire?"
+            },
+            "pass": "pass",
+            "note": ""
+          },
+          {
+            "id": "eye_level",
+            "q": {
+              "he": "בגובה העיניים — בלי מושג מקצועי?",
+              "en": "Eye level — no jargon?"
+            },
+            "pass": "pass",
+            "note": ""
+          },
+          {
+            "id": "pillar",
+            "q": {
+              "he": "נתלה על אחד משלושת המסרים?",
+              "en": "Hangs on one of the 3 pillars?"
+            },
+            "pass": "pass",
+            "note": ""
+          },
+          {
+            "id": "action",
+            "q": {
+              "he": "מראה מעשה — לא רק אומר מילים?",
+              "en": "Shows an action, not just words?"
+            },
+            "pass": "pass",
+            "note": ""
+          },
+          {
+            "id": "minimum",
+            "q": {
+              "he": "מחזק את \"המינימום שמחזיק\"?",
+              "en": "Reinforces \"the minimum that holds\"?"
+            },
+            "pass": "pass",
+            "note": ""
+          },
+          {
+            "id": "no_magic",
+            "q": {
+              "he": "לא נשמע כהבטחת קסם או מספר?",
+              "en": "No magic promise / number?"
+            },
+            "pass": "pass",
+            "note": ""
+          }
+        ],
+        "checkedAt": "2026-06-11T12:49:14.952Z"
+      }
     },
     {
       "id": "CP2",
@@ -170,7 +235,7 @@
         "leads": null,
         "recordedAt": null
       },
-      "createdAt": "2026-06-11T08:50:28.218Z",
+      "createdAt": "2026-06-11T12:49:14.810Z",
       "formats": [
         {
           "id": "CP2-reel",
@@ -186,8 +251,8 @@
             "broll": null
           },
           "render": null,
-          "createdAt": "2026-06-11T08:50:28.219Z",
-          "updatedAt": "2026-06-11T08:50:28.219Z"
+          "createdAt": "2026-06-11T12:49:14.810Z",
+          "updatedAt": "2026-06-11T12:49:14.810Z"
         },
         {
           "id": "CP2-carousel",
@@ -230,8 +295,8 @@
             ]
           },
           "render": null,
-          "createdAt": "2026-06-11T08:50:28.219Z",
-          "updatedAt": "2026-06-11T08:50:28.219Z"
+          "createdAt": "2026-06-11T12:49:14.810Z",
+          "updatedAt": "2026-06-11T12:49:14.810Z"
         },
         {
           "id": "CP2-story",
@@ -246,8 +311,8 @@
             "cta": "עקוב — כל שבוע מעשה אחד קטן שמחזיק"
           },
           "render": null,
-          "createdAt": "2026-06-11T08:50:28.219Z",
-          "updatedAt": "2026-06-11T08:50:28.219Z"
+          "createdAt": "2026-06-11T12:49:14.810Z",
+          "updatedAt": "2026-06-11T12:49:14.810Z"
         },
         {
           "id": "CP2-image",
@@ -261,8 +326,8 @@
             "subhook": "כן, אני התזונאי"
           },
           "render": null,
-          "createdAt": "2026-06-11T08:50:28.219Z",
-          "updatedAt": "2026-06-11T08:50:28.219Z"
+          "createdAt": "2026-06-11T12:49:14.810Z",
+          "updatedAt": "2026-06-11T12:49:14.810Z"
         },
         {
           "id": "CP2-txt_broll",
@@ -283,10 +348,75 @@
             "broll": null
           },
           "render": null,
-          "createdAt": "2026-06-11T08:50:28.219Z",
-          "updatedAt": "2026-06-11T08:50:28.219Z"
+          "createdAt": "2026-06-11T12:49:14.810Z",
+          "updatedAt": "2026-06-11T12:49:14.810Z"
         }
-      ]
+      ],
+      "advice": {
+        "verdict": "warn",
+        "redLines": [],
+        "hookCheck": {
+          "ok": true,
+          "problems": []
+        },
+        "goldenTest": [
+          {
+            "id": "desire",
+            "q": {
+              "he": "מדבר אל הרצון של האווטאר (תפקוד, לא מראה)?",
+              "en": "Speaks to the avatar's desire?"
+            },
+            "pass": "warn",
+            "note": "לא זוהתה שפת תפקוד (אנרגיה / חליפה / גב / ילדים...)"
+          },
+          {
+            "id": "eye_level",
+            "q": {
+              "he": "בגובה העיניים — בלי מושג מקצועי?",
+              "en": "Eye level — no jargon?"
+            },
+            "pass": "pass",
+            "note": ""
+          },
+          {
+            "id": "pillar",
+            "q": {
+              "he": "נתלה על אחד משלושת המסרים?",
+              "en": "Hangs on one of the 3 pillars?"
+            },
+            "pass": "pass",
+            "note": ""
+          },
+          {
+            "id": "action",
+            "q": {
+              "he": "מראה מעשה — לא רק אומר מילים?",
+              "en": "Shows an action, not just words?"
+            },
+            "pass": "pass",
+            "note": ""
+          },
+          {
+            "id": "minimum",
+            "q": {
+              "he": "מחזק את \"המינימום שמחזיק\"?",
+              "en": "Reinforces \"the minimum that holds\"?"
+            },
+            "pass": "pass",
+            "note": ""
+          },
+          {
+            "id": "no_magic",
+            "q": {
+              "he": "לא נשמע כהבטחת קסם או מספר?",
+              "en": "No magic promise / number?"
+            },
+            "pass": "pass",
+            "note": ""
+          }
+        ],
+        "checkedAt": "2026-06-11T12:49:14.953Z"
+      }
     }
   ]
 }

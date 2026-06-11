@@ -85,6 +85,23 @@
     </div>
     <p class="muted" id="hint" style="margin-top:10px"></p>
 
+    <h2 data-i18n="advisorH">יועץ A4 — לפי המתודה</h2>
+    <label data-i18n="ideaL">רעיון / סיטואציה מהחיים</label>
+    <input id="a-idea" placeholder="בופה בחתונה, טיסה, ערב מול המקרר...">
+    <label data-i18n="pillarL">עמוד תוכן</label>
+    <select id="a-pillar">
+      <option value="">—</option>
+      <option value="no-revolution">1 · אפשר בלי מהפכה</option>
+      <option value="diets-fail">2 · דיאטות נכשלות מהסבל</option>
+      <option value="i-live-it">3 · אני חי את זה</option>
+      <option value="umbrella">המטרייה · המינימום שמחזיק</option>
+    </select>
+    <div style="margin-top:10px; display:flex; gap:8px;">
+      <button class="btn" id="adviseHooksBtn" data-i18n="suggestHooks">הצע הוקים</button>
+      <button class="btn ghost" id="adviseCritiqueBtn" data-i18n="critiqueDraft">בדוק טיוטה</button>
+    </div>
+    <div id="advisorOut" style="margin-top:10px"></div>
+
     <h2 data-i18n="posts">פוסטי ליבה</h2>
     <div id="postList"></div>
   </aside>

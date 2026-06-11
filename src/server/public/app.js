@@ -12,7 +12,11 @@ const I18N = {
         thStatus:'סטטוס', thAgent:'סוכן', thSchedule:'תזמון', thLast:'ריצה אחרונה', thOutput:'פלט אחרון',
         runNow:'הרץ עכשיו', historyH:'היסטוריית ריצות', totalAgents:'סוכנים', onTrack:'במסלול',
         needsAttention:'דורש תשומת לב', never:'טרם רץ',
-        st_on_track:'במסלול', st_needs_attention:'דורש תשומת לב', st_overdue:'באיחור', st_idle:'טרם רץ', st_planned:'מתוכנן' },
+        st_on_track:'במסלול', st_needs_attention:'דורש תשומת לב', st_overdue:'באיחור', st_idle:'טרם רץ', st_planned:'מתוכנן',
+        advisorH:'יועץ A4 — לפי המתודה', ideaL:'רעיון / סיטואציה מהחיים', pillarL:'עמוד תוכן',
+        suggestHooks:'הצע הוקים', critiqueDraft:'בדוק טיוטה', useHook:'השתמש', strongest:'החזק ביותר',
+        verdict_pass:'✓ עובר את מבחן הזהב', verdict_warn:'⚠ עובר — עם הערות', verdict_fail:'✗ לא עובר — קו אדום',
+        thinking:'בודק מול המתודה...', fitsPillar:'מתאים לעמוד' },
   en: { new:'New core post', lang:'Language', hook1:'Main hook', hook2:'Sub hook', body:'Body',
         create:'Create + repurpose', posts:'Core posts', pipelineH:'Pipeline by status', calH:'Publishing calendar',
         render:'Render', next:'Advance', sched:'Schedule', auto:'Auto-schedule', view:'View', repurpose:'Re-repurpose',
@@ -22,7 +26,11 @@ const I18N = {
         thStatus:'Status', thAgent:'Agent', thSchedule:'Schedule', thLast:'Last run', thOutput:'Last output',
         runNow:'Run now', historyH:'Run history', totalAgents:'Total agents', onTrack:'On track',
         needsAttention:'Needs attention', never:'Never ran',
-        st_on_track:'On track', st_needs_attention:'Needs attention', st_overdue:'Overdue', st_idle:'Never ran', st_planned:'Planned' },
+        st_on_track:'On track', st_needs_attention:'Needs attention', st_overdue:'Overdue', st_idle:'Never ran', st_planned:'Planned',
+        advisorH:'Advisor A4 — per the method', ideaL:'Idea / real-life situation', pillarL:'Content pillar',
+        suggestHooks:'Suggest hooks', critiqueDraft:'Critique draft', useHook:'Use', strongest:'Strongest',
+        verdict_pass:'✓ Passes the golden test', verdict_warn:'⚠ Passes — with notes', verdict_fail:'✗ Fails — red line',
+        thinking:'Checking against the method...', fitsPillar:'Fits pillar' },
 };
 
 function t(k){ return (I18N[LANG]||I18N.he)[k] || k; }
@@ -181,13 +189,59 @@ async function setDate(id){
   if(d) { await api(`/api/formats/${encodeURIComponent(id)}/schedule`,'POST',{date:d}); load(); }
 }
 
+// --- advisor (A4) ---
+let LAST_HOOKS = [];
+
+async function adviseHooks(){
+  const out = document.getElementById('advisorOut');
+  out.innerHTML = `<p class="muted">${t('thinking')}</p>`;
+  const r = await api('/api/advisor/hooks','POST',{ idea: val('a-idea'), pillar: val('a-pillar'), lang: LANG });
+  LAST_HOOKS = r.hooks;
+  out.innerHTML = r.hooks.map((h,i)=>`
+    <div class="card">
+      <div class="t">${esc(h.text)}</div>
+      <div class="meta">
+        <span class="tag">${esc(h.typeLabel?.[LANG]||h.typeLabel?.he||h.type)}</span>
+        ${h.strongest?`<span class="tag" style="border-color:var(--accent);color:var(--accent)">★ ${t('strongest')}</span>`:''}
+        ${h.fit&&!h.strongest?`<span class="tag">${t('fitsPillar')}</span>`:''}
+      </div>
+      ${h.why?`<div class="muted" style="margin-top:4px">${esc(h.why[LANG]||h.why.he||'')}</div>`:''}
+      <div class="row"><button class="btn ghost sm" onclick="useHook(${i})">${t('useHook')} ←</button></div>
+    </div>`).join('') || `<p class="muted">—</p>`;
+}
+
+function useHook(i){
+  const h = LAST_HOOKS[i];
+  if(!h) return;
+  document.getElementById('f-hook1').value = h.text;
+}
+
+async function adviseCritique(){
+  const out = document.getElementById('advisorOut');
+  out.innerHTML = `<p class="muted">${t('thinking')}</p>`;
+  const r = await api('/api/advisor/critique','POST',{
+    hook1: val('f-hook1'), hook2: val('f-hook2'), body: val('f-body'), cta: val('f-cta'),
+    tags: { pillar: val('a-pillar') },
+  });
+  const mark = p => p==='pass'?'✓':(p==='warn'?'⚠':'✗');
+  const cls = p => p==='pass'?'ok':(p==='warn'?'':'fail');
+  out.innerHTML = `
+    <div class="card">
+      <div class="t ${cls(r.verdict)}">${t('verdict_'+r.verdict)}</div>
+      ${r.goldenTest.map(c=>`<div class="${cls(c.pass)}" style="font-size:12px; margin-top:3px">${mark(c.pass)} ${esc(c.q[LANG]||c.q.he)}${c.note?` — <span class="muted">${esc(c.note)}</span>`:''}</div>`).join('')}
+      ${r.redLines.length?`<div style="margin-top:8px" class="fail">${r.redLines.map(v=>`✗ ${esc(v.label[LANG]||v.label.he)}: «${esc(v.match)}»`).join('<br>')}</div>`:''}
+    </div>`;
+}
+
 function val(id){ return document.getElementById(id).value.trim(); }
 function esc(s){ return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 
 document.getElementById('create').onclick = create;
 document.getElementById('langToggle').onclick = ()=>{ LANG = LANG==='he'?'en':'he'; render(); };
 document.querySelectorAll('.tab').forEach(b=> b.onclick = ()=>{ TAB = b.dataset.tab; render(); });
+document.getElementById('adviseHooksBtn').onclick = adviseHooks;
+document.getElementById('adviseCritiqueBtn').onclick = adviseCritique;
 window.repurpose=repurpose; window.autoSched=autoSched; window.doRender=doRender; window.adv=adv; window.setDate=setDate;
-window.runAgentNow=runAgentNow;
+window.runAgentNow=runAgentNow; window.useHook=useHook;
 
 load();

@@ -14,6 +14,7 @@ import { repurpose, suggestSchedule } from '../engine/repurpose.js';
 import { renderFormatRecord } from '../render/render.js';
 import { integrationStatus } from '../integrations/index.js';
 import { agentsOverview, runAgent } from '../agents.js';
+import { suggestHooks, critiquePost } from '../engine/advisor.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PUBLIC_DIR = resolve(__dirname, 'public');
@@ -72,6 +73,23 @@ async function api(req, res, url) {
       const result = await runAgent(id);
       return send(res, 200, result);
     } catch (err) { return send(res, 400, { error: err.message }); }
+  }
+
+  // --- advisor (A4) ---
+  if (req.method === 'POST' && pathname === '/api/advisor/hooks') {
+    const b = await readBody(req);
+    return send(res, 200, await suggestHooks(b));
+  }
+
+  if (req.method === 'POST' && pathname === '/api/advisor/critique') {
+    const b = await readBody(req);
+    let target = b;
+    if (b.postId) {
+      const post = store.getPost(db, b.postId);
+      if (!post) return send(res, 404, { error: 'post not found' });
+      target = post;
+    }
+    return send(res, 200, critiquePost(target));
   }
 
   if (req.method === 'POST' && pathname === '/api/posts') {
