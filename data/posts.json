@@ -3,12 +3,28 @@
     {
       "id": "CP1",
       "lang": "he",
-      "title": "הפסיקי לתת ל-AI לכתוב בשבילך",
-      "hook1": "הפסיקי לתת ל-AI לכתוב בשבילך",
-      "hook2": "ה-AI הוא עורך, לא כותב",
-      "body": "אם תתני ל-AI לכתוב את כל הפוסט מאפס, תקבלי תוכן רובוטי ופלסטי שנשמע כמו כולם. הטריק הוא להקליט את המחשבות הגולמיות שלך על הרעיון. ה-AI לוקח את הבלאגן ועורך אותו לפוסט מושלם שנשמע כמוך. ככה את בולטת כמומחית במקום להישמע גנרית.",
-      "cta": "הגיבי \"מערכת\" ואשלח לך את התהליך המלא",
-      "createdAt": "2026-06-10T14:09:47.580Z",
+      "title": "אין אצלי משקל. אפס.",
+      "hook1": "אין אצלי משקל. אפס.",
+      "hook2": "לא שוקלים אצלי בכלל",
+      "body": "ניסית כמה דיאטות והכל קרס? זה לא בגלל שאתה חלש. זה בגלל שנמכרה לך שיטה שבנויה על סבל. כשכל בוקר מתחיל בעלייה על משקל, בנית לעצמך בית משפט במטבח. אצלי מודדים דברים אחרים לגמרי: שיש לך כוח לרדוף אחרי הילדים, שהגב לא כואב, שהחליפה נסגרת בקלות. זה מה שחוגגים.",
+      "cta": "תגיב \"מותר\" ואשלח לך את המדריך לרגעים הקשים",
+      "tags": {
+        "pillar": "diets-fail",
+        "hookType": "permission",
+        "angle": "אין משקל בקליניקה",
+        "ctaType": "comment-word"
+      },
+      "metrics": {
+        "reach": null,
+        "views": null,
+        "saves": null,
+        "shares": null,
+        "comments": null,
+        "profileVisits": null,
+        "leads": null,
+        "recordedAt": null
+      },
+      "createdAt": "2026-06-11T08:50:28.206Z",
       "formats": [
         {
           "id": "CP1-reel",
@@ -18,14 +34,14 @@
           "status": "to_edit",
           "scheduleDate": null,
           "copy": {
-            "hook": "הפסיקי לתת ל-AI לכתוב בשבילך",
-            "subhook": "ה-AI הוא עורך, לא כותב",
-            "caption": "אם תתני ל-AI לכתוב את כל הפוסט מאפס, תקבלי תוכן רובוטי ופלסטי שנשמע כמו כולם. הטריק הוא להקליט את המחשבות הגולמיות שלך על הרעיון. ה-AI לוקח את הבלאגן ועורך אותו לפוסט מושלם שנשמע כמוך. ככה את בולטת כמומחית במקום להישמע גנרית.\n\nהגיבי \"מערכת\" ואשלח לך את התהליך המלא",
+            "hook": "אין אצלי משקל. אפס.",
+            "subhook": "לא שוקלים אצלי בכלל",
+            "caption": "ניסית כמה דיאטות והכל קרס? זה לא בגלל שאתה חלש. זה בגלל שנמכרה לך שיטה שבנויה על סבל. כשכל בוקר מתחיל בעלייה על משקל, בנית לעצמך בית משפט במטבח. אצלי מודדים דברים אחרים לגמרי: שיש לך כוח לרדוף אחרי הילדים, שהגב לא כואב, שהחליפה נסגרת בקלות. זה מה שחוגגים.\n\nתגיב \"מותר\" ואשלח לך את המדריך לרגעים הקשים",
             "broll": null
           },
           "render": null,
-          "createdAt": "2026-06-10T14:09:47.580Z",
-          "updatedAt": "2026-06-10T14:09:47.580Z"
+          "createdAt": "2026-06-11T08:50:28.219Z",
+          "updatedAt": "2026-06-11T08:50:28.219Z"
         },
         {
           "id": "CP1-carousel",
@@ -37,35 +53,43 @@
           "copy": {
             "slides": [
               {
-                "heading": "הפסיקי לתת ל-AI לכתוב בשבילך",
-                "text": "ה-AI הוא עורך, לא כותב"
+                "heading": "אין אצלי משקל. אפס.",
+                "text": "לא שוקלים אצלי בכלל"
               },
               {
                 "heading": "",
-                "text": "אם תתני ל-AI לכתוב את כל הפוסט מאפס, תקבלי תוכן רובוטי ופלסטי שנשמע כמו כולם."
+                "text": "ניסית כמה דיאטות והכל קרס?"
               },
               {
                 "heading": "",
-                "text": "הטריק הוא להקליט את המחשבות הגולמיות שלך על הרעיון."
+                "text": "זה לא בגלל שאתה חלש."
               },
               {
                 "heading": "",
-                "text": "ה-AI לוקח את הבלאגן ועורך אותו לפוסט מושלם שנשמע כמוך."
+                "text": "זה בגלל שנמכרה לך שיטה שבנויה על סבל."
               },
               {
                 "heading": "",
-                "text": "ככה את בולטת כמומחית במקום להישמע גנרית."
+                "text": "כשכל בוקר מתחיל בעלייה על משקל, בנית לעצמך בית משפט במטבח."
               },
               {
                 "heading": "",
-                "text": "הגיבי \"מערכת\" ואשלח לך את התהליך המלא",
+                "text": "אצלי מודדים דברים אחרים לגמרי: שיש לך כוח לרדוף אחרי הילדים, שהגב לא כואב, שהחליפה נסגרת בקלות."
+              },
+              {
+                "heading": "",
+                "text": "זה מה שחוגגים."
+              },
+              {
+                "heading": "",
+                "text": "תגיב \"מותר\" ואשלח לך את המדריך לרגעים הקשים",
                 "isCta": true
               }
             ]
           },
           "render": null,
-          "createdAt": "2026-06-10T14:09:47.580Z",
-          "updatedAt": "2026-06-10T14:09:47.580Z"
+          "createdAt": "2026-06-11T08:50:28.219Z",
+          "updatedAt": "2026-06-11T08:50:28.219Z"
         },
         {
           "id": "CP1-story",
@@ -75,13 +99,13 @@
           "status": "to_edit",
           "scheduleDate": null,
           "copy": {
-            "heading": "הפסיקי לתת ל-AI לכתוב בשבילך",
-            "body": "אם תתני ל-AI לכתוב את כל הפוסט מאפס, תקבלי תוכן רובוטי ופלסטי שנשמע כמו כולם. הטריק הוא להקליט את המחשבות הגולמיות שלך על הרעיון. ה-AI לוקח את הבלאגן ועורך אותו לפוסט מושלם שנשמע כמוך.",
-            "cta": "הגיבי \"מערכת\" ואשלח לך את התהליך המלא"
+            "heading": "אין אצלי משקל. אפס.",
+            "body": "ניסית כמה דיאטות והכל קרס? זה לא בגלל שאתה חלש. זה בגלל שנמכרה לך שיטה שבנויה על סבל.",
+            "cta": "תגיב \"מותר\" ואשלח לך את המדריך לרגעים הקשים"
           },
           "render": null,
-          "createdAt": "2026-06-10T14:09:47.580Z",
-          "updatedAt": "2026-06-10T14:09:47.580Z"
+          "createdAt": "2026-06-11T08:50:28.219Z",
+          "updatedAt": "2026-06-11T08:50:28.219Z"
         },
         {
           "id": "CP1-image",
@@ -91,12 +115,12 @@
           "status": "to_edit",
           "scheduleDate": null,
           "copy": {
-            "hook": "הפסיקי לתת ל-AI לכתוב בשבילך",
-            "subhook": "ה-AI הוא עורך, לא כותב"
+            "hook": "אין אצלי משקל. אפס.",
+            "subhook": "לא שוקלים אצלי בכלל"
           },
           "render": null,
-          "createdAt": "2026-06-10T14:09:47.580Z",
-          "updatedAt": "2026-06-10T14:09:47.580Z"
+          "createdAt": "2026-06-11T08:50:28.219Z",
+          "updatedAt": "2026-06-11T08:50:28.219Z"
         },
         {
           "id": "CP1-txt_broll",
@@ -107,140 +131,160 @@
           "scheduleDate": null,
           "copy": {
             "lines": [
-              "הפסיקי לתת ל-AI לכתוב בשבילך",
-              "ה-AI הוא עורך, לא כותב",
-              "אם תתני ל-AI לכתוב את כל הפוסט מאפס, תקבלי תוכן רובוטי ופלסטי שנשמע כמו כולם.",
-              "הטריק הוא להקליט את המחשבות הגולמיות שלך על הרעיון.",
-              "ה-AI לוקח את הבלאגן ועורך אותו לפוסט מושלם שנשמע כמוך.",
-              "ככה את בולטת כמומחית במקום להישמע גנרית."
+              "אין אצלי משקל. אפס.",
+              "לא שוקלים אצלי בכלל",
+              "ניסית כמה דיאטות והכל קרס?",
+              "זה לא בגלל שאתה חלש.",
+              "זה בגלל שנמכרה לך שיטה שבנויה על סבל.",
+              "כשכל בוקר מתחיל בעלייה על משקל, בנית לעצמך בית משפט במטבח."
             ],
             "broll": null
           },
           "render": null,
-          "createdAt": "2026-06-10T14:09:47.580Z",
-          "updatedAt": "2026-06-10T14:09:47.580Z"
+          "createdAt": "2026-06-11T08:50:28.219Z",
+          "updatedAt": "2026-06-11T08:50:28.219Z"
         }
       ]
     },
     {
       "id": "CP2",
-      "lang": "en",
-      "title": "Stop letting AI write for you",
-      "hook1": "Stop letting AI write for you",
-      "hook2": "AI is an editor, not a writer",
-      "body": "If you let AI write the whole post from scratch you get robotic, plastic content that sounds like everyone else. The trick is to record your raw thoughts about the idea. AI takes the mess and edits it into a perfect post that sounds like you. That is how you stand out as an expert instead of sounding generic.",
-      "cta": "Comment \"SYSTEM\" and I will send you the full process",
-      "createdAt": "2026-06-10T14:09:47.580Z",
+      "lang": "he",
+      "title": "הקפה עם הרוגלה שלי. כל בוקר.",
+      "hook1": "הקפה עם הרוגלה שלי. כל בוקר.",
+      "hook2": "כן, אני התזונאי",
+      "body": "אני אבא, עובד, עם שולחן שבת מלא. כל בוקר יש קפה ורוגלה, וזה מתוכנן — לא נפילה. ביום-יום הצלחת שלי מאוזנת ומשביעה, ובכל יום יש מתנה אחת טובה. לא הורדתי כלום מהחיים — הוספתי להם סדר שמחזיק. אם זה עובד אצלי, באותה סירה שלך, זה יעבוד גם אצלך.",
+      "cta": "עקוב — כל שבוע מעשה אחד קטן שמחזיק",
+      "tags": {
+        "pillar": "i-live-it",
+        "hookType": "confession",
+        "angle": "הקפה והרוגלה של הבוקר",
+        "ctaType": "follow"
+      },
+      "metrics": {
+        "reach": null,
+        "views": null,
+        "saves": null,
+        "shares": null,
+        "comments": null,
+        "profileVisits": null,
+        "leads": null,
+        "recordedAt": null
+      },
+      "createdAt": "2026-06-11T08:50:28.218Z",
       "formats": [
         {
           "id": "CP2-reel",
           "coreId": "CP2",
           "type": "reel",
-          "lang": "en",
+          "lang": "he",
           "status": "to_edit",
           "scheduleDate": null,
           "copy": {
-            "hook": "Stop letting AI write for you",
-            "subhook": "AI is an editor, not a writer",
-            "caption": "If you let AI write the whole post from scratch you get robotic, plastic content that sounds like everyone else. The trick is to record your raw thoughts about the idea. AI takes the mess and edits it into a perfect post that sounds like you. That is how you stand out as an expert instead of sounding generic.\n\nComment \"SYSTEM\" and I will send you the full process",
+            "hook": "הקפה עם הרוגלה שלי. כל בוקר.",
+            "subhook": "כן, אני התזונאי",
+            "caption": "אני אבא, עובד, עם שולחן שבת מלא. כל בוקר יש קפה ורוגלה, וזה מתוכנן — לא נפילה. ביום-יום הצלחת שלי מאוזנת ומשביעה, ובכל יום יש מתנה אחת טובה. לא הורדתי כלום מהחיים — הוספתי להם סדר שמחזיק. אם זה עובד אצלי, באותה סירה שלך, זה יעבוד גם אצלך.\n\nעקוב — כל שבוע מעשה אחד קטן שמחזיק",
             "broll": null
           },
           "render": null,
-          "createdAt": "2026-06-10T14:09:47.580Z",
-          "updatedAt": "2026-06-10T14:09:47.580Z"
+          "createdAt": "2026-06-11T08:50:28.219Z",
+          "updatedAt": "2026-06-11T08:50:28.219Z"
         },
         {
           "id": "CP2-carousel",
           "coreId": "CP2",
           "type": "carousel",
-          "lang": "en",
+          "lang": "he",
           "status": "to_edit",
           "scheduleDate": null,
           "copy": {
             "slides": [
               {
-                "heading": "Stop letting AI write for you",
-                "text": "AI is an editor, not a writer"
+                "heading": "הקפה עם הרוגלה שלי. כל בוקר.",
+                "text": "כן, אני התזונאי"
               },
               {
                 "heading": "",
-                "text": "If you let AI write the whole post from scratch you get robotic, plastic content that sounds like everyone else."
+                "text": "אני אבא, עובד, עם שולחן שבת מלא."
               },
               {
                 "heading": "",
-                "text": "The trick is to record your raw thoughts about the idea."
+                "text": "כל בוקר יש קפה ורוגלה, וזה מתוכנן — לא נפילה."
               },
               {
                 "heading": "",
-                "text": "AI takes the mess and edits it into a perfect post that sounds like you."
+                "text": "ביום-יום הצלחת שלי מאוזנת ומשביעה, ובכל יום יש מתנה אחת טובה."
               },
               {
                 "heading": "",
-                "text": "That is how you stand out as an expert instead of sounding generic."
+                "text": "לא הורדתי כלום מהחיים — הוספתי להם סדר שמחזיק."
               },
               {
                 "heading": "",
-                "text": "Comment \"SYSTEM\" and I will send you the full process",
+                "text": "אם זה עובד אצלי, באותה סירה שלך, זה יעבוד גם אצלך."
+              },
+              {
+                "heading": "",
+                "text": "עקוב — כל שבוע מעשה אחד קטן שמחזיק",
                 "isCta": true
               }
             ]
           },
           "render": null,
-          "createdAt": "2026-06-10T14:09:47.581Z",
-          "updatedAt": "2026-06-10T14:09:47.581Z"
+          "createdAt": "2026-06-11T08:50:28.219Z",
+          "updatedAt": "2026-06-11T08:50:28.219Z"
         },
         {
           "id": "CP2-story",
           "coreId": "CP2",
           "type": "story",
-          "lang": "en",
+          "lang": "he",
           "status": "to_edit",
           "scheduleDate": null,
           "copy": {
-            "heading": "Stop letting AI write for you",
-            "body": "If you let AI write the whole post from scratch you get robotic, plastic content that sounds like everyone else. The trick is to record your raw thoughts about the idea. AI takes the mess and edits it into a perfect post that sounds like you.",
-            "cta": "Comment \"SYSTEM\" and I will send you the full process"
+            "heading": "הקפה עם הרוגלה שלי. כל בוקר.",
+            "body": "אני אבא, עובד, עם שולחן שבת מלא. כל בוקר יש קפה ורוגלה, וזה מתוכנן — לא נפילה. ביום-יום הצלחת שלי מאוזנת ומשביעה, ובכל יום יש מתנה אחת טובה.",
+            "cta": "עקוב — כל שבוע מעשה אחד קטן שמחזיק"
           },
           "render": null,
-          "createdAt": "2026-06-10T14:09:47.581Z",
-          "updatedAt": "2026-06-10T14:09:47.581Z"
+          "createdAt": "2026-06-11T08:50:28.219Z",
+          "updatedAt": "2026-06-11T08:50:28.219Z"
         },
         {
           "id": "CP2-image",
           "coreId": "CP2",
           "type": "image",
-          "lang": "en",
+          "lang": "he",
           "status": "to_edit",
           "scheduleDate": null,
           "copy": {
-            "hook": "Stop letting AI write for you",
-            "subhook": "AI is an editor, not a writer"
+            "hook": "הקפה עם הרוגלה שלי. כל בוקר.",
+            "subhook": "כן, אני התזונאי"
           },
           "render": null,
-          "createdAt": "2026-06-10T14:09:47.581Z",
-          "updatedAt": "2026-06-10T14:09:47.581Z"
+          "createdAt": "2026-06-11T08:50:28.219Z",
+          "updatedAt": "2026-06-11T08:50:28.219Z"
         },
         {
           "id": "CP2-txt_broll",
           "coreId": "CP2",
           "type": "txt_broll",
-          "lang": "en",
+          "lang": "he",
           "status": "to_edit",
           "scheduleDate": null,
           "copy": {
             "lines": [
-              "Stop letting AI write for you",
-              "AI is an editor, not a writer",
-              "If you let AI write the whole post from scratch you get robotic, plastic content that sounds like everyone else.",
-              "The trick is to record your raw thoughts about the idea.",
-              "AI takes the mess and edits it into a perfect post that sounds like you.",
-              "That is how you stand out as an expert instead of sounding generic."
+              "הקפה עם הרוגלה שלי. כל בוקר.",
+              "כן, אני התזונאי",
+              "אני אבא, עובד, עם שולחן שבת מלא.",
+              "כל בוקר יש קפה ורוגלה, וזה מתוכנן — לא נפילה.",
+              "ביום-יום הצלחת שלי מאוזנת ומשביעה, ובכל יום יש מתנה אחת טובה.",
+              "לא הורדתי כלום מהחיים — הוספתי להם סדר שמחזיק."
             ],
             "broll": null
           },
           "render": null,
-          "createdAt": "2026-06-10T14:09:47.581Z",
-          "updatedAt": "2026-06-10T14:09:47.581Z"
+          "createdAt": "2026-06-11T08:50:28.219Z",
+          "updatedAt": "2026-06-11T08:50:28.219Z"
         }
       ]
     }

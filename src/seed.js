@@ -1,4 +1,5 @@
-// Bilingual example data so the dashboard isn't empty on first run.
+// Example data drawn from the actual brand method (method/02-strategy.md) so
+// the dashboard demonstrates real, on-voice content from first run.
 import { makeCorePost } from './schema.js';
 import { builders } from './engine/formats.js';
 import { FORMATS } from './schema.js';
@@ -15,21 +16,25 @@ function withFormats(core) {
 }
 
 export function seed() {
-  const he = makeCorePost({
+  // Pillar 2 ("diets fail from suffering") with the signature permission hook.
+  const cp1 = makeCorePost({
     id: 'CP1', lang: 'he',
-    hook1: 'הפסיקי לתת ל-AI לכתוב בשבילך',
-    hook2: 'ה-AI הוא עורך, לא כותב',
-    body: 'אם תתני ל-AI לכתוב את כל הפוסט מאפס, תקבלי תוכן רובוטי ופלסטי שנשמע כמו כולם. הטריק הוא להקליט את המחשבות הגולמיות שלך על הרעיון. ה-AI לוקח את הבלאגן ועורך אותו לפוסט מושלם שנשמע כמוך. ככה את בולטת כמומחית במקום להישמע גנרית.',
-    cta: 'הגיבי "מערכת" ואשלח לך את התהליך המלא',
+    hook1: 'אין אצלי משקל. אפס.',
+    hook2: 'לא שוקלים אצלי בכלל',
+    body: 'ניסית כמה דיאטות והכל קרס? זה לא בגלל שאתה חלש. זה בגלל שנמכרה לך שיטה שבנויה על סבל. כשכל בוקר מתחיל בעלייה על משקל, בנית לעצמך בית משפט במטבח. אצלי מודדים דברים אחרים לגמרי: שיש לך כוח לרדוף אחרי הילדים, שהגב לא כואב, שהחליפה נסגרת בקלות. זה מה שחוגגים.',
+    cta: 'תגיב "מותר" ואשלח לך את המדריך לרגעים הקשים',
+    pillar: 'diets-fail', hookType: 'permission', angle: 'אין משקל בקליניקה', ctaType: 'comment-word',
   });
 
-  const en = makeCorePost({
-    id: 'CP2', lang: 'en',
-    hook1: 'Stop letting AI write for you',
-    hook2: 'AI is an editor, not a writer',
-    body: 'If you let AI write the whole post from scratch you get robotic, plastic content that sounds like everyone else. The trick is to record your raw thoughts about the idea. AI takes the mess and edits it into a perfect post that sounds like you. That is how you stand out as an expert instead of sounding generic.',
-    cta: 'Comment "SYSTEM" and I will send you the full process',
+  // Pillar 3 ("I live it myself") — the morning coffee confession.
+  const cp2 = makeCorePost({
+    id: 'CP2', lang: 'he',
+    hook1: 'הקפה עם הרוגלה שלי. כל בוקר.',
+    hook2: 'כן, אני התזונאי',
+    body: 'אני אבא, עובד, עם שולחן שבת מלא. כל בוקר יש קפה ורוגלה, וזה מתוכנן — לא נפילה. ביום-יום הצלחת שלי מאוזנת ומשביעה, ובכל יום יש מתנה אחת טובה. לא הורדתי כלום מהחיים — הוספתי להם סדר שמחזיק. אם זה עובד אצלי, באותה סירה שלך, זה יעבוד גם אצלך.',
+    cta: 'עקוב — כל שבוע מעשה אחד קטן שמחזיק',
+    pillar: 'i-live-it', hookType: 'confession', angle: 'הקפה והרוגלה של הבוקר', ctaType: 'follow',
   });
 
-  return { posts: [withFormats(he), withFormats(en)] };
+  return { posts: [withFormats(cp1), withFormats(cp2)] };
 }
