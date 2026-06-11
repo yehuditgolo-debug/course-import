@@ -6,11 +6,23 @@ const I18N = {
   he: { new:'פוסט ליבה חדש', lang:'שפה', hook1:'הוק ראשי', hook2:'הוק משני', body:'גוף הפוסט',
         create:'צור + שכפל', posts:'פוסטי ליבה', pipelineH:'פייפליין לפי סטטוס', calH:'לוח פרסום',
         render:'רנדר', next:'קדם', sched:'תזמן', auto:'תזמון אוטומטי', view:'צפה', repurpose:'שכפל מחדש',
-        hint:'כתבי פוסט ליבה אחד — המערכת תייצר ממנו 5 פורמטים אוטומטית.' },
+        hint:'כתבי פוסט ליבה אחד — המערכת תייצר ממנו 5 פורמטים אוטומטית.',
+        tabContent:'תוכן', tabAgents:'סוכנים',
+        agentsH:'כל סוכן במערכת — מה רץ, מה לא, מה צריך את העיניים שלך',
+        thStatus:'סטטוס', thAgent:'סוכן', thSchedule:'תזמון', thLast:'ריצה אחרונה', thOutput:'פלט אחרון',
+        runNow:'הרץ עכשיו', historyH:'היסטוריית ריצות', totalAgents:'סוכנים', onTrack:'במסלול',
+        needsAttention:'דורש תשומת לב', never:'טרם רץ',
+        st_on_track:'במסלול', st_needs_attention:'דורש תשומת לב', st_overdue:'באיחור', st_idle:'טרם רץ', st_planned:'מתוכנן' },
   en: { new:'New core post', lang:'Language', hook1:'Main hook', hook2:'Sub hook', body:'Body',
         create:'Create + repurpose', posts:'Core posts', pipelineH:'Pipeline by status', calH:'Publishing calendar',
         render:'Render', next:'Advance', sched:'Schedule', auto:'Auto-schedule', view:'View', repurpose:'Re-repurpose',
-        hint:'Write one core post — the system fans it out into 5 formats automatically.' },
+        hint:'Write one core post — the system fans it out into 5 formats automatically.',
+        tabContent:'Content', tabAgents:'Agents',
+        agentsH:'Every agent in the system — what ran, what didn\'t, what wants your eyes',
+        thStatus:'Status', thAgent:'Agent', thSchedule:'Schedule', thLast:'Last run', thOutput:'Last output',
+        runNow:'Run now', historyH:'Run history', totalAgents:'Total agents', onTrack:'On track',
+        needsAttention:'Needs attention', never:'Never ran',
+        st_on_track:'On track', st_needs_attention:'Needs attention', st_overdue:'Overdue', st_idle:'Never ran', st_planned:'Planned' },
 };
 
 function t(k){ return (I18N[LANG]||I18N.he)[k] || k; }
@@ -22,7 +34,16 @@ async function api(path, method='GET', body){
   return r.json();
 }
 
-async function load(){ STATE = await api('/api/state'); render(); }
+let AGENTS = [];
+let TAB = 'content';
+
+async function load(){
+  [STATE, AGENTS] = await Promise.all([
+    api('/api/state'),
+    api('/api/agents').then(r=>r.agents),
+  ]);
+  render();
+}
 
 function applyI18n(){
   document.documentElement.lang = LANG; document.documentElement.dir = LANG==='he'?'rtl':'ltr';
@@ -59,6 +80,53 @@ function render(){
   }).join('');
 
   renderCalendar(formats);
+  renderAgents();
+  // tab visibility
+  document.getElementById('view-content').style.display = TAB==='content'?'':'none';
+  document.getElementById('view-agents').style.display = TAB==='agents'?'':'none';
+  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active', b.dataset.tab===TAB));
+}
+
+function fmtWhen(iso){
+  if(!iso) return '—';
+  const d = new Date(iso);
+  return d.toLocaleString(LANG==='he'?'he-IL':'en-US',{dateStyle:'short',timeStyle:'short'});
+}
+
+function renderAgents(){
+  const counts = { total: AGENTS.length,
+    on: AGENTS.filter(a=>a.status==='on_track').length,
+    attn: AGENTS.filter(a=>a.status==='needs_attention'||a.status==='overdue').length };
+  document.getElementById('agentsStats').innerHTML = `
+    <div class="stat"><div class="n">${counts.total}</div><div class="l">${t('totalAgents')}</div></div>
+    <div class="stat"><div class="n ok">${counts.on}</div><div class="l">${t('onTrack')}</div></div>
+    <div class="stat"><div class="n ${counts.attn?'fail':''}">${counts.attn}</div><div class="l">${t('needsAttention')}</div></div>`;
+
+  document.getElementById('agentsBody').innerHTML = AGENTS.map(a=>{
+    const last = a.lastRuns[0];
+    return `<tr>
+      <td><span class="dot ${a.status}"></span>${t('st_'+a.status)}</td>
+      <td><b>${a.name[LANG]||a.name.he}</b><div class="muted">${a.desc[LANG]||a.desc.he}</div></td>
+      <td>${a.code}</td>
+      <td>${a.schedule}</td>
+      <td>${fmtWhen(last?.at)}</td>
+      <td class="${last? (last.ok?'ok':'fail'):''}">${last? esc(last.summary):'—'}</td>
+      <td>${a.live?`<button class="btn sm" onclick="runAgentNow('${a.id}')">${t('runNow')}</button>`:''}</td>
+    </tr>`;
+  }).join('');
+
+  const allRuns = AGENTS.flatMap(a=>a.lastRuns.map(r=>({...r, agent:a.name[LANG]||a.name.he})))
+    .sort((x,y)=>y.at.localeCompare(x.at)).slice(0,12);
+  document.getElementById('agentHistory').innerHTML = allRuns.map(r=>`
+    <div class="hist"><span class="when">${fmtWhen(r.at)}</span>
+      <b>${r.agent}</b>
+      <span class="${r.ok?'ok':'fail'}">${r.ok?'✓':'✗'}</span>
+      <span>${esc(r.summary)}</span></div>`).join('') || `<p class="muted">—</p>`;
+}
+
+async function runAgentNow(id){
+  await api(`/api/agents/${encodeURIComponent(id)}/run`,'POST',{});
+  load();
 }
 
 function card(f){
@@ -118,6 +186,8 @@ function esc(s){ return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&l
 
 document.getElementById('create').onclick = create;
 document.getElementById('langToggle').onclick = ()=>{ LANG = LANG==='he'?'en':'he'; render(); };
+document.querySelectorAll('.tab').forEach(b=> b.onclick = ()=>{ TAB = b.dataset.tab; render(); });
 window.repurpose=repurpose; window.autoSched=autoSched; window.doRender=doRender; window.adv=adv; window.setDate=setDate;
+window.runAgentNow=runAgentNow;
 
 load();

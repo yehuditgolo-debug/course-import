@@ -40,6 +40,22 @@
   .on { color:#54d68a; } .off { color:#c76b6b; }
   a.view { color:var(--accent); text-decoration:none; }
   .muted { color:var(--mut); font-size:12px; }
+  .tabs { display:flex; gap:8px; margin-bottom:6px; }
+  .tab { background:transparent; color:var(--mut); border:1px solid var(--line); border-radius:999px; padding:6px 18px; }
+  .tab.active { background:var(--accent); color:#0b1f20; border-color:var(--accent); font-weight:800; }
+  .agents-stats { display:flex; gap:14px; margin:10px 0 14px; }
+  .stat { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:12px 18px; min-width:120px; }
+  .stat .n { font-size:26px; font-weight:800; }
+  .stat .l { font-size:12px; color:var(--mut); }
+  table.agents { width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  table.agents th, table.agents td { padding:10px 12px; text-align:start; font-size:13px; border-bottom:1px solid var(--line); }
+  table.agents th { color:var(--mut); font-size:11px; text-transform:uppercase; letter-spacing:1px; }
+  .dot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-inline-end:6px; }
+  .dot.on_track { background:#54d68a; } .dot.needs_attention { background:#e06c6c; }
+  .dot.overdue { background:#e0b56c; } .dot.idle { background:#7a9c9a; } .dot.planned { background:#445e5d; }
+  .hist { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:8px 12px; margin-bottom:6px; font-size:12px; display:flex; gap:10px; align-items:baseline; }
+  .hist .when { color:var(--mut); min-width:150px; }
+  .ok { color:#54d68a; } .fail { color:#e06c6c; }
 </style>
 </head>
 <body>
@@ -74,11 +90,33 @@
   </aside>
 
   <main class="main">
-    <h2 data-i18n="pipelineH">פייפליין לפי סטטוס</h2>
-    <div class="pipeline" id="pipeline"></div>
+    <nav class="tabs">
+      <button class="tab active" data-tab="content" data-i18n="tabContent">תוכן</button>
+      <button class="tab" data-tab="agents" data-i18n="tabAgents">סוכנים</button>
+    </nav>
 
-    <h2 data-i18n="calH">לוח פרסום</h2>
-    <div class="cal" id="cal"></div>
+    <section id="view-content">
+      <h2 data-i18n="pipelineH">פייפליין לפי סטטוס</h2>
+      <div class="pipeline" id="pipeline"></div>
+
+      <h2 data-i18n="calH">לוח פרסום</h2>
+      <div class="cal" id="cal"></div>
+    </section>
+
+    <section id="view-agents" style="display:none">
+      <h2 data-i18n="agentsH">כל סוכן במערכת — מה רץ, מה לא, מה צריך את העיניים שלך</h2>
+      <div class="agents-stats" id="agentsStats"></div>
+      <table class="agents">
+        <thead><tr>
+          <th data-i18n="thStatus">סטטוס</th><th data-i18n="thAgent">סוכן</th><th>CODE</th>
+          <th data-i18n="thSchedule">תזמון</th><th data-i18n="thLast">ריצה אחרונה</th>
+          <th data-i18n="thOutput">פלט אחרון</th><th></th>
+        </tr></thead>
+        <tbody id="agentsBody"></tbody>
+      </table>
+      <h2 data-i18n="historyH">היסטוריית ריצות</h2>
+      <div id="agentHistory"></div>
+    </section>
   </main>
 </div>
 

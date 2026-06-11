@@ -13,6 +13,7 @@ import { makeCorePost, FORMAT_LABELS, STATUS_LABELS, STATUSES, FORMATS } from '.
 import { repurpose, suggestSchedule } from '../engine/repurpose.js';
 import { renderFormatRecord } from '../render/render.js';
 import { integrationStatus } from '../integrations/index.js';
+import { agentsOverview, runAgent } from '../agents.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PUBLIC_DIR = resolve(__dirname, 'public');
@@ -59,6 +60,18 @@ async function api(req, res, url) {
       formats: allFormats(db),
       meta: { FORMAT_LABELS, STATUS_LABELS, STATUSES, FORMATS, integrations: integrationStatus() },
     });
+  }
+
+  if (req.method === 'GET' && pathname === '/api/agents') {
+    return send(res, 200, { agents: agentsOverview() });
+  }
+
+  if (req.method === 'POST' && pathname.match(/^\/api\/agents\/[^/]+\/run$/)) {
+    const id = decodeURIComponent(pathname.split('/')[3]);
+    try {
+      const result = await runAgent(id);
+      return send(res, 200, result);
+    } catch (err) { return send(res, 400, { error: err.message }); }
   }
 
   if (req.method === 'POST' && pathname === '/api/posts') {
